@@ -42,3 +42,8 @@
         src: C:\inetpub\artifact2\app.zip
         dest: C:\inetpub\artifact2
         remote_src: yes
+        
+    - name: Delete Zip File
+      win_file:
+        path: C:\inetpub\artifact2\app.zip
+        state: absent
