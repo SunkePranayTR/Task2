@@ -1,0 +1,16 @@
+ansible_user: Pranay
+ansible_password: "ThomsonReuters@1711"
+ansible_connection: winrm 
+ansible_winrm_transport: ntlm 
+ansible_port: 5985 
+ansible_winrm_scheme: http 
+ansible_winrm_server_cert_validation: ignore 
+
+# ansible_user: "ansibleuserc"
+# ansible_password: "task2Test1"
+ 
+# ansible_connection: winrm
+# ansible_port: 5986
+# ansible_winrm_transport: ntlm
+# ansible_winrm_scheme: http
+# ansible_winrm_server_cert_validation: ignore
