@@ -35,7 +35,7 @@ jobs:
 
       - name: Run ansible playbook
         env:
-          JFROG_UNAME: ${{ secrets.JFROG_UNAME }}
+          JFROG_UNAME: ${{ secrets.JFROG_USERNAME }}
           JFROG_PASSWORD: ${{ secrets.JFROG_PASSWORD }}
         run: |
           ansible-playbook \
