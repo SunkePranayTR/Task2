@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   test-connectivity:
-    runs-on: Linux
+    runs-on: Linux1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
