@@ -27,18 +27,18 @@
 
     - name: Create artifact folder
       win_file:
-        path: C:\inetpub\artifact1
+        path: C:\inetpub\artifact2
         state: directory
  
     - name: Download artifact zip
       win_get_url:
         url: https://tr1.jfrog.io/artifactory/generic-local/CTT/GST/gosystemapicore/develop/2024.05.22.22.zip
-        dest: C:\inetpub\artifact1\app.zip
+        dest: C:\inetpub\artifact2\app.zip
         url_username: "{{ lookup('env','JFROG_UNAME') }}"
         url_password: "{{ lookup('env','JFROG_PASSWORD') }}"
  
     - name: Extract artifact zip
       win_unzip:
-        src: C:\inetpub\artifact1\app.zip
-        dest: C:\inetpub\artifact1
+        src: C:\inetpub\artifact2\app.zip
+        dest: C:\inetpub\artifact2
         remote_src: yes
