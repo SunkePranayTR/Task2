@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   test-connectivity:
-    runs-on: Linux1
+    runs-on: ansible_runner1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
