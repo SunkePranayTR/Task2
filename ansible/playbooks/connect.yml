@@ -59,19 +59,19 @@
  
     - name: Create IIS App pool
       win_iis_webapppool:
-        name: artifact1-pool
+        name: artifact2-pool
         state: started
 
     - name: Remove existing IIS Website if present
       win_iis_website:
-        name: artifact1-site
+        name: artifact2-site
         state: absent
         
     - name: Create IIS Website
       win_iis_website:
-        name: artifact1-site
+        name: artifact2-site
         state: started
-        physical_path: C:\inetpub\artifact1
-        application_pool: artifact1-pool
+        physical_path: C:\inetpub\artifact2
+        application_pool: artifact2-pool
         port: 8080
 
