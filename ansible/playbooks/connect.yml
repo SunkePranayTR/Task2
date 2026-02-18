@@ -47,3 +47,31 @@
       win_file:
         path: C:\inetpub\artifact2\app.zip
         state: absent
+
+    - name: Install IIS and Management Tools
+      win_feature:
+        name:
+         - Web-Server
+         - Web-Mgmt-Tools
+         - Web-Scripting-Tools
+        state: present
+        include_management_tools: yes
+ 
+    - name: Create IIS App pool
+      win_iis_webapppool:
+        name: artifact1-pool
+        state: started
+
+    - name: Remove existing IIS Website if present
+      win_iis_website:
+        name: artifact1-site
+        state: absent
+        
+    - name: Create IIS Website
+      win_iis_website:
+        name: artifact1-site
+        state: started
+        physical_path: C:\inetpub\artifact1
+        application_pool: artifact1-pool
+        port: 8080
+
